@@ -1,0 +1,29 @@
+<template format="4"
+  revision="1"
+  name="MVP Fragment"
+  description="Создает новые классы Fragment, Presenter, ViewContract">
+ 
+ <category value="Other" />
+ 
+ <parameter 
+  id="className"
+  name="Entity Name"
+  type="string"
+  constraints="class|unique|nonempty"
+  default="MvpEntity"
+  help="Название сущности" />
+ 
+ <parameter
+  id="layoutName"
+  name="Layout Name"
+  type="string"
+  constraints="layout|unique|nonempty"
+  suggest="fragment_${classToResource(className)}"
+  default="fragment_empty"
+  help="Название лэйаута" />
+ 
+ <globals file="globals.xml.ftl" />
+ 
+ <execute file="recipe.xml.ftl" />
+
+</template> 
